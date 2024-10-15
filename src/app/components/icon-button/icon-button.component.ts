@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, } from '@angular/core';
+import { Component, Input, Output, EventEmitter} from '@angular/core';
 
 
 @Component({
@@ -12,5 +12,14 @@ import { Component, Input, } from '@angular/core';
 export class IconButtonComponent {
 
   @Input() count: number = 0;
+
+
+  @Output() IconClickEvent = new EventEmitter<number>();
+
+
+  iconClickEvent() {
+   
+    this.IconClickEvent.emit(this.count);
+  }
 
 }

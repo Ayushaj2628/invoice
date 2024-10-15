@@ -27,4 +27,9 @@ export class AppComponent {
     alert('cancel');
   }
 
+
+  iconClicked(value: number){
+    alert('no Notification');
+  }
+
 }
