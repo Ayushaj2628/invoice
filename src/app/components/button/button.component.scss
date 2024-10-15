@@ -1,0 +1,35 @@
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  button.primary {
+    background-color: #ff8c32; /* Orange color */
+    color: white; /* White text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px; /* Rounded corners */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    transition: background-color 0.3s ease;
+  }
+  
+  .icon {
+  font-size: 18px; /* Icon size */
+}
+
+  button.secondary {
+    background-color: gray;
+    color: black;
+  }
+
+  button.cancel {
+    background-color: red;
+    color: white;
+  }
