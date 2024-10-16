@@ -3,11 +3,12 @@ import { Component, Input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ButtonComponent } from './components/button/button.component';
 import { IconButtonComponent } from "./components/icon-button/icon-button.component";
+import { InputFieldComponent } from './components/input-field/input-field.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, ButtonComponent, IconButtonComponent],
+  imports: [RouterOutlet, CommonModule, ButtonComponent, IconButtonComponent, InputFieldComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

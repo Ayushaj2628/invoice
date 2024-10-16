@@ -15,18 +15,8 @@ export class ButtonComponent {
 
   @Output() buttonClickEvent = new EventEmitter<string>();
 
-  constructor() {
-    this.abc();
-  }
-
-  abc() {
-    this.isShowIcon = false;
-    let a = 10;
-    a = 2;
-  }
-
-  buttonCompClick() {
-   
+ 
+  buttonCompClick() {   
     this.buttonClickEvent.emit(this.label);
   }
 }
