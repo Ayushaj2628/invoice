@@ -4,11 +4,12 @@ import { RouterOutlet } from '@angular/router';
 import { ButtonComponent } from './components/button/button.component';
 import { IconButtonComponent } from "./components/icon-button/icon-button.component";
 import { InputFieldComponent } from './components/input-field/input-field.component';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, ButtonComponent, IconButtonComponent, InputFieldComponent],
+  imports: [RouterOutlet, CommonModule, ButtonComponent, IconButtonComponent, InputFieldComponent, DropdownComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

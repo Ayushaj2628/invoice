@@ -1,0 +1,5 @@
+<label for="client" class="form-label">Client *</label>
+<select id="client" class="form-select" (change)="onClientChange($event)">
+  <option value="" disabled>Please Select</option>
+  <option *ngFor="let client of clients" [value]="client">{{ client }}</option>
+</select>
