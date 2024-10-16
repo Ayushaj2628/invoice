@@ -1,3 +1,5 @@
+@use "./../../../styles/variables";
+
 button {
     padding: 10px 20px;
     border-radius: 5px;
@@ -5,7 +7,7 @@ button {
   }
   
   button.primary {
-    background-color: #ff8c32; /* Orange color */
+    background-color: variables.$primary-color; /* Orange color */
     color: white; /* White text */
     border: none;
     padding: 10px 20px;

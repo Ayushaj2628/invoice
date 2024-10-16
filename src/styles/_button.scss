@@ -1,0 +1,259 @@
+// @use "../styles/helpers";
+// @use "../styles/typography";
+// @use "../styles/variables";
+
+// $button-types: (
+//   primary: variables.$brand-600,
+//   primary-hover: variables.$brand-700,
+//   primary-disabled: variables.$brand-200,
+//   primary-focused: variables.$brand-600,
+//   primary-color: variables.$white,
+
+//   secondary: variables.$brand-50,
+//   secondary-hover: variables.$brand-100,
+//   secondary-disabled: variables.$brand-25,
+//   secondary-focused: variables.$brand-50,
+//   secondary-color: variables.$brand-700,
+
+//   secondary-gray: variables.$white,
+//   secondary-gray-color: variables.$gray-700,
+//   secondary-gray-hover: variables.$gray-50,
+//   secondary-gray-color-hover: variables.$gray-800,
+//   secondary-gray-disabled: transparent,
+//   secondary-gray-color-disabled: variables.$gray-300,
+//   secondary-gray-focused: transparent,
+//   secondary-gray-color-focused: variables.$gray-700,
+
+//   tertiary: #f44336,
+//   tertiary-hover: #4caf50,
+//   tertiary-disabled: #4caf50,
+//   tertiary-focused: #4caf50,
+//   tertiary-color: variables.$brand-700,
+
+//   tertiary-gray: #f44336,
+//   tertiary-gray-hover: #4caf50,
+//   tertiary-gray-disabled: #4caf50,
+//   tertiary-gray-focused: #4caf50,
+//   tertiary-gray-color: variables.$brand-700,
+
+//   link: transparent,
+//   link-color: variables.$brand-700,
+//   link-hover: transparent,
+//   link-color-hover: variables.$brand-800,
+//   link-disabled: transparent,
+//   link-color-disabled: variables.$gray-300,
+//   link-focused: transparent,
+//   link-color-focused: variables.$brand-700,
+
+//   link-gray: transparent,
+//   link-gray-hover: transparent,
+//   link-gray-color-hover: variables.$gray-700,
+//   link-gray-disabled: transparent,
+//   link-gray-color-disabled: variables.$gray-300,
+//   link-gray-focused: transparent,
+//   link-gray-color-focused: variables.$gray-600,
+//   link-gray-color: variables.$gray-600,
+// );
+
+// .btn {
+//   &--icon-button {
+//     background: transparent;
+//     border: none;
+//   }
+
+//   &--primary {
+//     padding: 10px 36px;
+//     border: none;
+//     border-radius: 8px;
+//     cursor: pointer;
+//     display: flex;
+//     justify-content: center;
+//     background-color: variables.$white;
+//     background-color: map-get($button-types, primary);
+//     color: map-get($button-types, primary-color);
+
+//     &:hover {
+//       background-color: map-get($button-types, primary-hover);
+//     }
+
+//     &:disabled {
+//       background-color: map-get($button-types, primary-disabled);
+//     }
+
+//     &:focus {
+//       background-color: map-get($button-types, primary-focused);
+//       box-shadow: 0px 0px 0px 4px #f4ebff;
+//       box-shadow: 0px 1px 2px 0px #1018280d;
+//     }
+//   }
+
+//   &--secondary {
+//     padding: 10px 36px;
+//     border: none;
+//     border-radius: 8px;
+//     cursor: pointer;
+//     display: flex;
+//     justify-content: center;
+//     background-color: variables.$white;
+//     background-color: map-get($button-types, primary);
+//     color: map-get($button-types, primary-color);
+//     background-color: map-get($button-types, secondary);
+
+//     &:hover {
+//       background-color: map-get($button-types, secondary-hover);
+//     }
+
+//     &:disabled {
+//       background-color: map-get($button-types, secondary-disabled);
+//     }
+
+//     &:focus {
+//       box-shadow: 0px 0px 0px 4px #f4ebff;
+//       box-shadow: 0px 1px 2px 0px #1018280d;
+//     }
+//   }
+
+//   &--secondary-gray {
+//     padding: 10px 36px;
+//     border: 1px solid variables.$gray-300;
+//     border-radius: 8px;
+//     cursor: pointer;
+//     display: flex;
+//     justify-content: center;
+//     background-color: map-get($button-types, secondary-gray);
+//     color: map-get($button-types, secondary-gray-color);
+
+//     &:hover {
+//       background-color: map-get($button-types, secondary-gray-hover);
+//       color: map-get($button-types, secondary-gray-color-hover);
+//     }
+
+//     &:disabled {
+//       background-color: map-get($button-types, secondary-gray-disabled);
+//       color: map-get($button-types, secondary-gray-color-disabled);
+//     }
+
+//     &:focus {
+//       box-shadow: 0px 0px 0px 4px #f4ebff;
+//       box-shadow: 0px 1px 2px 0px #1018280d;
+//     }
+//   }
+
+//   &--tertiary {
+//     // background-color: map-get($button-types, tertiary);
+//     // color: #ffffff;
+
+//     // &:hover {
+//     //   background-color: map-get($button-types, tertiary-hover);
+//     // }
+
+//     // &:disabled {
+//     //   background-color: map-get($button-types, tertiary-disabled);
+//     // }
+
+//     // &:focus {
+//     //   box-shadow: 0px 0px 0px 4px #f4ebff;
+//     //   box-shadow: 0px 1px 2px 0px #1018280d;
+//     // }
+//   }
+
+//   &--link {
+//     padding: 0 !important;
+//     border: none;
+//     cursor: pointer;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background-color: map-get($button-types, link);
+//     color: map-get($button-types, link-color);
+//     padding: 0;
+
+//     &:hover {
+//       background-color: map-get($button-types, link-hover);
+//       color: map-get($button-types, link-color-hover);
+//     }
+
+//     &:disabled {
+//       background-color: map-get($button-types, link-disabled);
+//       color: map-get($button-types, link-color-disabled);
+//     }
+
+//     &:focus {
+//       background-color: map-get($button-types, link-focused);
+//       color: map-get($button-types, link-color-focused);
+//     }
+//   }
+
+//   &--link-gray {
+//     padding: 0 !important;
+//     border: none;
+//     cursor: pointer;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background-color: map-get($button-types, link-gray);
+//     color: map-get($button-types, link-gray-color);
+//     padding: 0;
+
+//     &:hover {
+//       background-color: map-get($button-types, link-gray-hover);
+//       color: map-get($button-types, link-gray-color-hover);
+//     }
+
+//     &:disabled {
+//       background-color: map-get($button-types, link-gray-disabled);
+//       color: map-get($button-types, link-gray-color-disabled);
+//     }
+
+//     &:focus {
+//       background-color: map-get($button-types, link-gray-focused);
+//       color: map-get($button-types, link-gray-color-focused);
+//     }
+//   }
+
+//   &--icon {
+//     padding: 0px;
+//     margin-right: 8px;
+//     background-color: transparent;
+//   }
+
+//   &--xs {
+//     font-size: 12px;
+//     padding: 5px 10px;
+//   }
+
+//   &--sm {
+//     height: helpers.Rem(32px);
+//     padding: 8px 14px;
+//     @include typography.text-sm;
+//     line-height: inherit;
+//   }
+
+//   &--md {
+//     height: helpers.Rem(40px);
+//     padding: 10px 16px;
+//     @include typography.text-sm;
+//     line-height: inherit;
+//   }
+
+//   &--lg {
+//     height: helpers.Rem(44px);
+//     padding: 10px 18px;
+//     @include typography.text-md;
+//     line-height: inherit;
+//   }
+
+//   &--xl {
+//     height: helpers.Rem(48px);
+//     padding: 12px 20px;
+//     @include typography.text-md;
+//     line-height: inherit;
+//   }
+
+//   &--2xl {
+//     height: helpers.Rem(60px);
+//     padding: 16px 28px;
+//     @include typography.text-lg;
+//     line-height: inherit;
+//   }
+// }

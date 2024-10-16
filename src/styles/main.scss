@@ -1,0 +1,22 @@
+@use './base';
+@use './variables';
+@use './mixins';
+@use './typography';
+@use './button';
+@use './elements';
+@use './margins';
+@use './colors';
+@use './breakpoints';
+@use './custom-material';
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+  margin: 0px;
+}

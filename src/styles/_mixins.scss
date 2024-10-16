@@ -1,0 +1,67 @@
+@import "./_variables";
+
+@mixin flexbox($justify, $align, $direction, $wrap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+
+@mixin rectangle($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin square($size) {
+  @include rectangle($size, $size);
+}
+
+@mixin breakpoint($class) {
+  @if $class == "<phone" {
+    @media (max-width: $phone-size) {
+      @content;
+    }
+  }
+
+  @if $class == "<tablet" {
+    @media (max-width: $tablet-size) {
+      @content;
+    }
+  }
+
+  @if $class == "<desktop" {
+    @media (max-width: $desktop-size) {
+      @content;
+    }
+  }
+
+  @if $class == ">desktop" {
+    @media (min-width: $desktop-size) {
+      @content;
+    }
+  }
+}
+
+@mixin basekick($fontSize, $lineHeight) {
+  transform: translateY(0);
+  &:before {
+    box-sizing: border-box;
+    content: "";
+    display: block;
+    height: 0;
+    margin-top: $fontSize;
+    width: 100%;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    height: 0;
+    margin-top: $lineHeight;
+  }
+}
+
+@mixin leftKick($px) {
+  transform: translateX($px);
+}

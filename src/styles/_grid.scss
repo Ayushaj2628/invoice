@@ -1,0 +1,158 @@
+@use '../helpers' as Helpers;
+@use '../breakpoints' as BreakPoints;
+
+.client-grid {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @include BreakPoints.respond-to(desktop-up) {
+    max-width: Helpers.Rem(1015px);
+    width: 100%;
+  }
+}
+
+.grid-row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include BreakPoints.respond-to(desktop-up) {
+    flex-direction: row;
+  }
+}
+
+.grid-column {
+  display: block;
+  flex: 1;
+  flex-direction: column;
+  height: auto;
+  position: relative;
+  width: 100%;
+
+  @include BreakPoints.respond-to(desktop-up) {
+    width: auto;
+  }
+}
+
+.left-aligned {
+  justify-content: flex-start;
+}
+
+.direction-row {
+  flex-direction: row;
+}
+
+.row {
+  margin: auto !important;
+}
+
+.grid [class*='col-']:first-of-type {
+	padding-left: 0;
+}
+
+.grid [class*='col-']:last-of-type {
+	padding-right: 0;
+}
+
+.grid [class*='col-'] {
+  @include BreakPoints.respond-to(desktop-down) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.grid {
+  &.aem-grid-right-to-left{
+    .row:first-child {
+      @include BreakPoints.respond-to(desktop-down) {
+        flex-direction: column-reverse;
+      }
+    }
+
+    [class*='col-']:last-child {
+      @include BreakPoints.respond-to(desktop-down) {
+        margin-top: 0!important;
+        padding-top: 0;
+      }
+      ul {
+        @include BreakPoints.respond-to(desktop-down) {
+          margin-bottom: 0;
+          margin-left: 0!important;
+        }
+      }
+      [class*='aem-container-margin-top']:first-child {
+        @include BreakPoints.respond-to(desktop-down) {
+          margin-top: 0!important;
+          padding-top: 0;
+        }
+      }
+    }
+  }
+
+  [class*='col-']:last-child {
+    .cmp-container {
+      .container {
+        @include BreakPoints.respond-to(desktop-up) {
+          padding-bottom: 0;
+        }
+
+        .cmp-container {
+          display: flex;
+          flex-direction: column;
+          @include BreakPoints.respond-to(desktop-up) {
+            gap: 30px;
+          }
+
+          .button {
+
+            @include BreakPoints.respond-to(tablet-down) {
+              margin-right: 0;
+            }
+          }
+
+          ul {
+            padding-left: 0;
+            // margin-left: 0;
+          }
+        }
+      }
+    }
+
+    .side-nav__contact-wrapper {
+      @include BreakPoints.respond-to(desktop-down) {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.grid {
+  ul {
+    padding-left: 0;
+    margin-left: 1rem;
+  }
+}
+
+.grid-remove-margin-top {
+  margin-top: 30px;
+  .row>* {
+    margin-top: 0;
+  }
+  .aem-container-margin-top--35 {
+    margin-top: 0 !important;
+  }
+}
+
+.grid-fixed-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 40px;
+
+  div {
+    flex-shrink: unset;
+    padding: 0;
+  }
+}

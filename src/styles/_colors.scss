@@ -1,0 +1,91 @@
+@use "./variables";
+
+// Mixin for background color
+@mixin bg-color($color) {
+  background-color: $color;
+}
+
+// Mixin for text color
+@mixin text-color($color) {
+  color: $color;
+}
+
+// Mixin for border
+@mixin border($color) {
+  border: 1px solid $color;
+}
+
+// Classes for background colors
+.primary-bg {
+  @include bg-color(variables.$brand-25);
+}
+
+.secondary-bg {
+  @include bg-color(variables.$brand-200);
+}
+
+.tertiary-bg {
+  @include bg-color(variables.$brand-200);
+}
+
+.warn-bg {
+  @include bg-color(variables.$brand-200);
+}
+
+.danger-bg {
+  @include bg-color(variables.$brand-200);
+}
+
+.success-bg {
+  @include bg-color(variables.$brand-200);
+}
+
+// Classes for text colors
+.primary-color {
+  @include text-color(variables.$brand-200);
+}
+
+.secondary-color {
+  @include text-color(variables.$brand-200);
+}
+
+.tertiary-color {
+  @include text-color(variables.$brand-200);
+}
+
+.warn-color {
+  @include text-color(variables.$brand-200);
+}
+
+.danger-color {
+  @include text-color(variables.$brand-200);
+}
+
+.success-color {
+  @include text-color(variables.$brand-200);
+}
+
+// Classes for borders
+.primary-border {
+  @include border(variables.$brand-200);
+}
+
+.secondary-border {
+  @include border(variables.$brand-200);
+}
+
+.tertiary-border {
+  @include border(variables.$brand-200);
+}
+
+.warn-border {
+  @include border(variables.$brand-200);
+}
+
+.danger-border {
+  @include border(variables.$brand-200);
+}
+
+.success-border {
+  @include border(variables.$brand-200);
+}

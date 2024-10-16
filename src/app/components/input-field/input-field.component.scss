@@ -1,4 +1,26 @@
+@use './../../../styles/variables';
+
 .full-width {
-    width: 100%;
-  }
-  
+  width: 100%;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  border-color: #d3d3d4;
+  border-radius: 5px;
+  box-shadow: none;
+  font-size: 14px;
+  color: #4d5154;
+  height: 44px;
+  line-height: 2;
+  max-width: 250px;;
+}
+
+.input:focus {
+  border-color: #ff9b44;
+  box-shadow: none;
+}

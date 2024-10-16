@@ -1,0 +1,42 @@
+@use "./breakpoints";
+@use "./helpers";
+@use "./variables";
+
+.wrapper {
+  max-width: variables.$max-content-width;
+  margin: 0 auto;
+
+  padding: 1.25rem;
+  @include breakpoints.respond-to(desktop-up) {
+    padding: 0 helpers.Rem(60px);
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-justify-center {
+  justify-content: center;
+}
+
+.flex-align-center {
+  align-items: center;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.menu-option {
+  cursor: pointer;
+  height: helpers.Rem(40px);
+  padding: helpers.Rem(10px) helpers.Rem(16px);
+}

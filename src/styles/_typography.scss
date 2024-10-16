@@ -1,0 +1,158 @@
+@use "./helpers";
+@use "./variables";
+@use "./breakpoints";
+@use "./mixins";
+
+// Inter font family
+$font-family-inter: "Inter", sans-serif;
+
+// Display styles
+@mixin display-2xl {
+  font-family: $font-family-inter;
+  font-size: 4.5rem;
+  line-height: 5.625rem;
+  letter-spacing: -2%;
+}
+
+.display-2xl {
+  @include display-2xl;
+}
+
+@mixin display-xl {
+  font-family: $font-family-inter;
+  font-size: 3.75rem;
+  line-height: 4.5rem;
+  letter-spacing: -2%;
+}
+
+.display-xl {
+  @include display-xl;
+}
+
+@mixin display-lg {
+  font-family: $font-family-inter;
+  font-size: 3rem;
+  line-height: 3.75rem;
+  letter-spacing: -2%;
+}
+
+.display-lg {
+  @include display-lg;
+}
+
+@mixin display-md {
+  font-family: $font-family-inter;
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  letter-spacing: -2%;
+}
+
+.display-md {
+  @include display-md;
+}
+
+@mixin display-sm {
+  font-family: $font-family-inter;
+  font-size: 1.875rem;
+  line-height: 2.375rem;
+}
+
+.display-sm {
+  @include display-sm;
+}
+
+@mixin display-xs {
+  font-family: $font-family-inter;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.display-xs {
+  @include display-xs;
+}
+
+// Text styles
+@mixin text-xl {
+  font-family: $font-family-inter;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+}
+
+.text-xl {
+  @include text-xl;
+}
+
+@mixin text-lg {
+  font-family: $font-family-inter;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-lg {
+  @include text-lg;
+}
+
+@mixin text-md {
+  font-family: $font-family-inter;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-md {
+  @include text-md;
+}
+
+@mixin text-sm {
+  font-family: $font-family-inter;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-sm {
+  @include text-sm;
+}
+
+@mixin text-xs {
+  font-family: $font-family-inter;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+.text-xs {
+  @include text-xs;
+}
+
+@mixin regular {
+  font-weight: 400 !important;
+}
+
+@mixin medium {
+  font-weight: 500 !important;
+}
+@mixin semibold {
+  font-weight: 600 !important;
+}
+@mixin bold {
+  font-weight: 700 !important;
+}
+
+.regular {
+  @include regular;
+}
+.medium {
+  @include medium;
+}
+.semibold {
+  @include semibold;
+}
+.bold {
+  @include bold;
+}
+
+
+.warning{
+  color: variables.$warning-500;
+}
+
+.subtitle{
+  color: variables.$gray-400;
+}
