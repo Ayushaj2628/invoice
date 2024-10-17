@@ -5,11 +5,12 @@ import { ButtonComponent } from './components/button/button.component';
 import { IconButtonComponent } from "./components/icon-button/icon-button.component";
 import { InputFieldComponent } from './components/input-field/input-field.component';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
+import { TextareaComponent } from './components/textarea/textarea.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, ButtonComponent, IconButtonComponent, InputFieldComponent, DropdownComponent],
+  imports: [RouterOutlet, CommonModule, ButtonComponent, IconButtonComponent, InputFieldComponent, DropdownComponent,TextareaComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
