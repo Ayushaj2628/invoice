@@ -6,11 +6,12 @@ import { IconButtonComponent } from "./components/icon-button/icon-button.compon
 import { InputFieldComponent } from './components/input-field/input-field.component';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { TextareaComponent } from './components/textarea/textarea.component';
+import { DatepickerComponent } from "./components/datepicker/datepicker.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, ButtonComponent, IconButtonComponent, InputFieldComponent, DropdownComponent,TextareaComponent],
+  imports: [RouterOutlet, CommonModule, ButtonComponent, IconButtonComponent, InputFieldComponent, DropdownComponent, TextareaComponent, DatepickerComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
