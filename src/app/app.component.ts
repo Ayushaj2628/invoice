@@ -7,11 +7,12 @@ import { InputFieldComponent } from './components/input-field/input-field.compon
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { TextareaComponent } from './components/textarea/textarea.component';
 import { DatepickerComponent } from "./components/datepicker/datepicker.component";
+import { ActionbuttonComponent } from "./components/actionbutton/actionbutton.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, ButtonComponent, IconButtonComponent, InputFieldComponent, DropdownComponent, TextareaComponent, DatepickerComponent],
+  imports: [RouterOutlet, CommonModule, ButtonComponent, IconButtonComponent, InputFieldComponent, DropdownComponent, TextareaComponent, DatepickerComponent, ActionbuttonComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

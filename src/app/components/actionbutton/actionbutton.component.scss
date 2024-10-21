@@ -1,0 +1,20 @@
+.menu {
+  cursor: pointer;
+}
+.dot {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background-color: grey;
+  border-radius: 50%;
+  margin: 2px;
+}
+.dropdown {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, .1);
+  box-shadow: inherit;
+  font-size: 10px;
+  border-radius: 3px;
+  transform-origin: left top 0;
+  width: 13%;
+}

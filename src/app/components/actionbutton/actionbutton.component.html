@@ -1,0 +1,13 @@
+<div class="menu" (click)="toggleDropdown()">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+</div>
+<div *ngIf="isDropdownOpen" class="dropdown">
+    <ul>
+        <li> <button (click)="onAction('Action 1')">View </button> </li>
+        <li> <button (click)="onAction('Action 2')">Edit </button></li>
+        <li> <button (click)="onAction('Action 3')">Delete </button></li>
+        <li> <button (click)="onAction('Action 3')">Download </button></li>
+    </ul>
+</div>
