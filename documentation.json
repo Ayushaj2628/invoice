@@ -125,11 +125,11 @@
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<div class=\"menu\" (click)=\"toggleDropdown()\">\r\n    <span class=\"dot\"></span>\r\n    <span class=\"dot\"></span>\r\n    <span class=\"dot\"></span>\r\n</div>\r\n<div *ngIf=\"isDropdownOpen\" class=\"dropdown\">\r\n    <ul>\r\n        <li (click)=\"onAction('Action 1')\">View</li>\r\n        <li (click)=\"onAction('Action 2')\">Edit</li>\r\n        <li (click)=\"onAction('Action 3')\">Delete</li>\r\n    </ul>\r\n</div>"
+            "templateData": "<div class=\"menu\" (click)=\"toggleDropdown()\">\r\n    <span class=\"dot\"></span>\r\n    <span class=\"dot\"></span>\r\n    <span class=\"dot\"></span>\r\n</div>\r\n<div *ngIf=\"isDropdownOpen\" class=\"dropdown\">\r\n    <ul>\r\n        <li> <button (click)=\"onAction('Action 1')\">View </button> </li>\r\n        <li> <button (click)=\"onAction('Action 2')\">Edit </button></li>\r\n        <li> <button (click)=\"onAction('Action 3')\">Delete </button></li>\r\n        <li> <button (click)=\"onAction('Action 3')\">Download </button></li>\r\n    </ul>\r\n</div>"
         },
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-90dd8910eaec390c7242f9dc2e2a2704cd0b429b6606bfa71ccdbea8a65a4a152b1b7d39ba5247f2e36426fee714ec162353573e975233436abe96b26b748b29",
+            "id": "component-AppComponent-49d09a2053ef3d86b1be4ebbdd64d97afef1b010b9483063518eff50c44d5310d88fef406995e4ad254512373045ea95346feb5a41f331ab1fa628a2c6086b95",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -156,7 +156,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 21
+                    "line": 22
                 }
             ],
             "methodsClass": [
@@ -173,7 +173,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 23,
+                    "line": 24,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -201,7 +201,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 27,
+                    "line": 28,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -229,7 +229,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 31,
+                    "line": 32,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -257,7 +257,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 36,
+                    "line": 37,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -313,18 +313,22 @@
                 {
                     "name": "ActionbuttonComponent",
                     "type": "component"
+                },
+                {
+                    "name": "FloatingButtonComponent",
+                    "type": "component"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\nimport { RouterOutlet } from '@angular/router';\r\nimport { ButtonComponent } from './components/button/button.component';\r\nimport { IconButtonComponent } from \"./components/icon-button/icon-button.component\";\r\nimport { InputFieldComponent } from './components/input-field/input-field.component';\r\nimport { DropdownComponent } from './components/dropdown/dropdown.component';\r\nimport { TextareaComponent } from './components/textarea/textarea.component';\r\nimport { DatepickerComponent } from \"./components/datepicker/datepicker.component\";\r\nimport { ActionbuttonComponent } from \"./components/actionbutton/actionbutton.component\";\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  standalone: true,\r\n  imports: [RouterOutlet, CommonModule, ButtonComponent, IconButtonComponent, InputFieldComponent, DropdownComponent, TextareaComponent, DatepickerComponent, ActionbuttonComponent],\r\n  templateUrl: './app.component.html',\r\n  styleUrl: './app.component.scss'\r\n})\r\nexport class AppComponent {\r\n \r\n  isShowIcon = true;\r\n\r\n  appClicked(value: string){\r\n    alert(value);\r\n  }\r\n\r\n  appClicked1(value: string){\r\n    alert('save');\r\n  }\r\n\r\n  appClicked2(value: string){\r\n    alert('cancel');\r\n  }\r\n\r\n\r\n  iconClicked(value: number){\r\n    alert('no Notification');\r\n  }\r\n\r\n}\r\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\nimport { RouterOutlet } from '@angular/router';\r\nimport { ButtonComponent } from './components/button/button.component';\r\nimport { IconButtonComponent } from \"./components/icon-button/icon-button.component\";\r\nimport { InputFieldComponent } from './components/input-field/input-field.component';\r\nimport { DropdownComponent } from './components/dropdown/dropdown.component';\r\nimport { TextareaComponent } from './components/textarea/textarea.component';\r\nimport { DatepickerComponent } from \"./components/datepicker/datepicker.component\";\r\nimport { ActionbuttonComponent } from \"./components/actionbutton/actionbutton.component\";\r\nimport { FloatingButtonComponent } from './components/floating-button/floating-button.component';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  standalone: true,\r\n  imports: [RouterOutlet, CommonModule, ButtonComponent, IconButtonComponent, InputFieldComponent, DropdownComponent, TextareaComponent, DatepickerComponent, ActionbuttonComponent, FloatingButtonComponent],\r\n  templateUrl: './app.component.html',\r\n  styleUrl: './app.component.scss'\r\n})\r\nexport class AppComponent {\r\n \r\n  isShowIcon = true;\r\n\r\n  appClicked(value: string){\r\n    alert(value);\r\n  }\r\n\r\n  appClicked1(value: string){\r\n    alert('save');\r\n  }\r\n\r\n  appClicked2(value: string){\r\n    alert('cancel');\r\n  }\r\n\r\n\r\n  iconClicked(value: number){\r\n    alert('no Notification');\r\n  }\r\n\r\n}\r\n",
             "styleUrl": "./app.component.scss",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<app-button [label]=\"'Save'\" [isShowIcon]=\"isShowIcon\" (buttonClickEvent)=\"appClicked1($event)\"></app-button>\r\n\r\n<app-button [label]=\"'cancel'\" [isShowIcon]=\"isShowIcon\" (buttonClickEvent)=\"appClicked2($event)\"></app-button>\r\n\r\n\r\n<app-button [label]=\"'ayush 3'\" [isShowIcon]=\"isShowIcon\" (buttonClickEvent)=\"appClicked($event)\"></app-button>\r\n\r\n<app-icon-button (IconClickEvent)=\"iconClicked($event)\"></app-icon-button>\r\n\r\n<app-input-field></app-input-field>\r\n\r\n<app-dropdown></app-dropdown>\r\n<app-textarea></app-textarea>\r\n<app-datepicker></app-datepicker>\r\n<app-actionbutton></app-actionbutton>"
+            "templateData": "<app-button [label]=\"'Save'\" [isShowIcon]=\"isShowIcon\" (buttonClickEvent)=\"appClicked1($event)\"></app-button>\r\n\r\n<app-button [label]=\"'cancel'\" [isShowIcon]=\"isShowIcon\" (buttonClickEvent)=\"appClicked2($event)\"></app-button>\r\n\r\n\r\n<app-button [label]=\"'ayush 3'\" [isShowIcon]=\"isShowIcon\" (buttonClickEvent)=\"appClicked($event)\"></app-button>\r\n\r\n<app-icon-button (IconClickEvent)=\"iconClicked($event)\"></app-icon-button>\r\n\r\n<app-input-field></app-input-field>\r\n\r\n<app-dropdown></app-dropdown>\r\n<app-textarea></app-textarea>\r\n<app-datepicker></app-datepicker>\r\n<app-actionbutton></app-actionbutton>\r\n<app-floating-button></app-floating-button>"
         },
         {
             "name": "ButtonComponent",
@@ -692,6 +696,44 @@
             "stylesData": "",
             "extends": [],
             "templateData": "<label for=\"client\" class=\"form-label\">Client *</label>\r\n<select id=\"client\" class=\"form-select\" (change)=\"onClientChange($event)\">\r\n  <option value=\"\" disabled>Please Select</option>\r\n  <option *ngFor=\"let client of clients\" [value]=\"client\">{{ client }}</option>\r\n</select>\r\n"
+        },
+        {
+            "name": "FloatingButtonComponent",
+            "id": "component-FloatingButtonComponent-a8d8952a44663bbf03dd8c422541554d988c6f55b61c1959ca51cf01bd1adbe4128b2ce945f88d8c416d4216e5f92b454571a815aee043b3cff4ec5dd04bed2d",
+            "file": "src/app/components/floating-button/floating-button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-floating-button",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./floating-button.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-floating-button',\r\n  standalone: true,\r\n  imports: [],\r\n  templateUrl: './floating-button.component.html',\r\n  styleUrl: './floating-button.component.scss'\r\n})\r\nexport class FloatingButtonComponent {\r\n\r\n}\r\n",
+            "styleUrl": "./floating-button.component.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div class=\"gear-icon\">\r\n    <i class=\"fa fa-gear\" style=\"font-size:36px;\"></i>\r\n  </div>\r\n  "
         },
         {
             "name": "HeaderComponent",
@@ -1213,7 +1255,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 5,
+        "count": 4,
         "status": "low",
         "files": [
             {
@@ -1289,6 +1331,15 @@
                 "name": "DropdownComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/floating-button/floating-button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FloatingButtonComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
