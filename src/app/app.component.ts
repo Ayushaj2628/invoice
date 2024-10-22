@@ -9,11 +9,12 @@ import { TextareaComponent } from './components/textarea/textarea.component';
 import { DatepickerComponent } from "./components/datepicker/datepicker.component";
 import { ActionbuttonComponent } from "./components/actionbutton/actionbutton.component";
 import { FloatingButtonComponent } from './components/floating-button/floating-button.component';
+import { CreatepageComponent } from './pages/invoice/createpage/createpage.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, ButtonComponent, IconButtonComponent, InputFieldComponent, DropdownComponent, TextareaComponent, DatepickerComponent, ActionbuttonComponent, FloatingButtonComponent],
+  imports: [RouterOutlet, CommonModule, ButtonComponent, IconButtonComponent, InputFieldComponent, DropdownComponent, TextareaComponent, DatepickerComponent, ActionbuttonComponent, FloatingButtonComponent, CreatepageComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

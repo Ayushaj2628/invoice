@@ -1,0 +1,6 @@
+.invoice {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; /* Space between grid items */
+    padding: 20px;
+}

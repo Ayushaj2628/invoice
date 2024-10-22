@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-textarea',
@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './textarea.component.scss'
 })
 export class TextareaComponent {
-
+  @Input() label: string = '';
 
  clientAddress: string = '';
 }

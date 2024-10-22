@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, NgModule, } from '@angular/core';
+import { Component, Input, NgModule, } from '@angular/core';
 
 @Component({
   selector: 'app-dropdown',
@@ -10,7 +10,10 @@ import { Component, NgModule, } from '@angular/core';
 })
 export class DropdownComponent {
   clients: string[] = ['Barry Cuda', 'Tressa Wexler'];
+  projects: string[] = ['Office management', 'Project management'];
+  taxs: string[] = ['Vat', 'Gst', 'No Tax'];
   selectedClient: string = '';
+  @Input() label: string = 'Button';
 
   onClientChange(event: any): void {
     console.log('Selected client:', this.selectedClient);

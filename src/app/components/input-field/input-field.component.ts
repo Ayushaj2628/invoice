@@ -9,7 +9,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./input-field.component.scss']
 })
 export class InputFieldComponent {
-  @Input() label: string = 'Input';
+  @Input() label: string = '';
   @Input() placeholder: string = 'Enter value';
   @Input() value: string = '';
 
