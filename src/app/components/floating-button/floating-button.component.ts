@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-floating-button',
@@ -8,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrl: './floating-button.component.scss'
 })
 export class FloatingButtonComponent {
+
+@Input() label: string = 'setting button'
+
+@Output() floatingbuttonClickEvent = new EventEmitter<string>()
+
+floatingbutton(){
+  this.floatingbuttonClickEvent.emit(this.label)
+}
 
 }

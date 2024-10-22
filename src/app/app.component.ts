@@ -38,4 +38,8 @@ export class AppComponent {
     alert('no Notification');
   }
 
+  floating(value: string){
+    alert('setting click')
+  }
+
 }

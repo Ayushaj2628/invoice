@@ -136,5 +136,9 @@
   },
   "cli": {
     "analytics": "414dbd7f-7696-4bf3-9f02-1d940515850b"
-  }
+  },
+  "styles": [
+  "src/styles.scss",
+  "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+]
 }
