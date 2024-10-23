@@ -1,8 +1,8 @@
 <div class="invoice">
-    <app-dropdown [label]="'client'"></app-dropdown>
-    <app-dropdown [label]="'project'"></app-dropdown>
+    <app-dropdown [label]="'client'" [options]="clients"></app-dropdown>
+    <app-dropdown [label]="'project'" [options]="projects"></app-dropdown>
     <app-input-field [label]="'Email'"></app-input-field>
-    <app-dropdown [label]="'tax'"></app-dropdown>
+    <app-dropdown [label]="'tax'" [options]="taxs"></app-dropdown>
     <app-textarea [label]="'Client Address'"></app-textarea>
     <app-textarea [label]="'Billing Address'"></app-textarea>
     <app-datepicker [label]="'Invoice Date'"></app-datepicker>
