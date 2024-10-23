@@ -15,4 +15,8 @@ export class CreatepageComponent {
 
   @Input() label: string = 'client';
 
+  clients: string[] = ['Barry Cuda', 'Tressa Wexler'];
+  projects: string[] = ['Office management', 'Project management'];
+  taxs: string[] = ['Vat', 'Gst', 'No Tax'];
+
 }
