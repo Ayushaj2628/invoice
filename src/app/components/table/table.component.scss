@@ -1,0 +1,35 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+span {
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+.paid {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.sent {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.partially-paid {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}

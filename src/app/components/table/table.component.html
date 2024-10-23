@@ -1,0 +1,33 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Invoice Number</th>
+        <th>Client</th>
+        <th>Created Date</th>
+        <th>Due Date</th>
+        <th>Amount</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let invoice of invoices; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ invoice.invoiceNumber }}</td>
+        <td>{{ invoice.client }}</td>
+        <td>{{ invoice.createdDate | date: 'dd MMM yyyy' }}</td>
+        <td>{{ invoice.dueDate | date: 'dd MMM yyyy' }}</td>
+        <td>{{ invoice.amount | currency }}</td>
+        <td>
+          <span [ngClass]="getStatusClass(invoice.status)">
+            {{ invoice.status }}
+          </span>
+        </td>
+        <td>
+          <button (click)="onActionClick(invoice)">...</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
