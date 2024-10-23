@@ -1,9 +1,9 @@
-<label for="client" class="form-label">{{label}}</label>
+<label for="client" class="form-label">{{ label }}</label>
 <div>
-<select id="client" class="form-select" (change)="onClientChange($event)">
-  <option value="" disabled>Please Select</option>
-  <option *ngFor="let client of clients" [value]="client">{{ client }}</option>
-  <option *ngFor="let project of projects" [value]="project">{{ project }}</option>
-  <option *ngFor="let tax of taxs" [value]="tax">{{ tax }}</option>
-</select>
+  <select id="client" class="form-select" (change)="onClientChange($event)">
+    <option value="" disabled>Please Select</option>
+    <option *ngFor="let option of options" [value]="option">
+      {{ option }}
+    </option>
+  </select>
 </div>

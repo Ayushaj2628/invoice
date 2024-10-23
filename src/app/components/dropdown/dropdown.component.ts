@@ -9,11 +9,9 @@ import { Component, Input, NgModule, } from '@angular/core';
   styleUrls: ['./dropdown.component.scss']
 })
 export class DropdownComponent {
-  clients: string[] = ['Barry Cuda', 'Tressa Wexler'];
-  projects: string[] = ['Office management', 'Project management'];
-  taxs: string[] = ['Vat', 'Gst', 'No Tax'];
+  @Input() options: string[] = ['Option 1', 'Option 2'];
+  @Input() label: string = 'Label';
   selectedClient: string = '';
-  @Input() label: string = 'Button';
 
   onClientChange(event: any): void {
     console.log('Selected client:', this.selectedClient);
