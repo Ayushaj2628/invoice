@@ -1,12 +1,24 @@
 <table class="table">
   <thead>
     <tr>
-      <th *ngFor="let header of headers">{{ header }}</th>
+      <th *ngFor="let header of headers">{{ header.value }}</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let data of datas">
-      <td *ngFor="let coloum of displayColumns">{{ data[coloum] }}</td>
+      <td *ngFor="let header of headers">
+        <!-- Handle different types based on header.type -->
+        <ng-container [ngSwitch]="header.type">
+          <!-- Display number -->
+          <span *ngSwitchCase="'number'">{{ data[header.name] }}</span>
+          <!-- Display string -->
+          <span *ngSwitchCase="'string'">{{ data[header.name] }}</span>
+          <!-- Display date -->
+          <span *ngSwitchCase="'date'">{{ data[header.name] | date }}</span>
+          <!-- Display status with different formatting (optional) -->
+          <span *ngSwitchCase="'status'" [ngClass]="getStatusClass(data[header.name])">{{ data[header.name] }}</span>
+        </ng-container>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -14,27 +26,34 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- <div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        Loop through headers to display column names
+        <th *ngFor="let header of headers">{{ header.value }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of datas">
+        Loop through headers again to dynamically render each row
+        <td *ngFor="let header of headers">
+          Handle different types based on header.type
+          <ng-container [ngSwitch]="header.type">
+            Display number
+            <span *ngSwitchCase="'number'">{{ row[header.name] }}</span>
+            Display string
+            <span *ngSwitchCase="'string'">{{ row[header.name] }}</span>
+            Display date
+            <span *ngSwitchCase="'date'">{{ row[header.name] | date }}</span>
+            Display status with different formatting (optional)
+            <span *ngSwitchCase="'status'" [ngClass]="getStatusClass(row[header.name])">{{ row[header.name] }}</span>
+          </ng-container>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
 
 
 

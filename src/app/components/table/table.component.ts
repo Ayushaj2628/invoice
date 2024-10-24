@@ -9,12 +9,21 @@ import { Component, Input } from '@angular/core';
   styleUrl: './table.component.scss',
 })
 export class TableComponent {
-    @Input() headers: string[] = [];
+    @Input() headers: Array<{ name: string, value: string, type: string }> = [];
   @Input() datas = <any>[];
  @Input() displayColumns = <any> [];
 
 
-
+ getStatusClass(status: string) {
+  switch (status) {
+    case 'Paid':
+      return 'text-success';  // Apply green text for 'Paid'
+    case 'Partially Paid':
+      return 'text-warning';  // Apply yellow text for 'Partially Paid'
+    default:
+      return '';
+  }
+}
 
  // headers = ['ID', 'Name', 'Age', 'Position'];
   // datas = <any>[
