@@ -11,7 +11,7 @@ import { Component, Input } from '@angular/core';
 export class TableComponent {
     @Input() headers: string[] = [];
   @Input() datas = <any>[];
- @Input() displayColumns = [];
+ @Input() displayColumns = <any> [];
 
 
 
