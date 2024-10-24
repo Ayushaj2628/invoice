@@ -1,14 +1,54 @@
 <table class="table">
+  <thead>
+    <tr>
+      <th *ngFor="let header of headers">{{ header }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of datas">
+      <td *ngFor="let coloum of displayColumns">{{ data[coloum] }}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <table class="table">
     <thead>
-      <tr>
+      <tr *ngFor="let thead of theads;">
         <th>#</th>
-        <th>Invoice Number</th>
-        <th>Client</th>
-        <th>Created Date</th>
-        <th>Due Date</th>
-        <th>Amount</th>
-        <th>Status</th>
-        <th>Action</th>
+        <th>{{thead.invoiceNumber}}</th>
+        <th>{{thead.client}}</th>
+        <th>{{thead.createdDate}}</th>
+        <th>{{thead.dueDate}}</th>
+        <th>{{thead.amount}}</th>
+        <th>{{thead.status}}</th>
+        <th>{{theads.action}}</th>
       </tr>
     </thead>
     <tbody>
@@ -29,5 +69,5 @@
         </td>
       </tr>
     </tbody>
-  </table>
+  </table> -->
   

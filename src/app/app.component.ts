@@ -44,4 +44,10 @@ export class AppComponent {
     alert('setting click')
   }
 
+   headers = ['ID', 'Name', 'Invoice Amount'];
+   datas = <any>[
+    { id: 1, name: 'John Doe', invoiceAmount: 2000 },
+    { id: 2, name: 'Jane Doe', invoiceAmount: 25000 },
+  ];
+  displayColumns = ['id', 'name', 'invoiceAmount'];
 }

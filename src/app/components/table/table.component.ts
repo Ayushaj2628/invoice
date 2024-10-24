@@ -1,60 +1,26 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-
-
-interface Invoice {
-  invoiceNumber: string;
-  client: string;
-  createdDate: Date;
-  dueDate: Date;
-  amount: number;
-  status: 'Paid' | 'Sent' | 'Partially Paid';
-}
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-table',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './table.component.html',
-  styleUrl: './table.component.scss'
+  styleUrl: './table.component.scss',
 })
 export class TableComponent {
-  invoices: Invoice[] = [
-    {
-      invoiceNumber: '#INV-0001',
-      client: 'Global Technologies',
-      createdDate: new Date('2019-03-11'),
-      dueDate: new Date('2019-03-17'),
-      amount: 2099,
-      status: 'Paid'
-    },
-    {
-      invoiceNumber: '#INV-0002',
-      client: 'Delta Infotech',
-      createdDate: new Date('2019-03-11'),
-      dueDate: new Date('2019-03-17'),
-      amount: 2099,
-      status: 'Sent'
-    },
-    {
-      invoiceNumber: '#INV-0003',
-      client: 'Cream Inc',
-      createdDate: new Date('2019-03-11'),
-      dueDate: new Date('2019-03-17'),
-      amount: 2099,
-      status: 'Partially Paid'
-    }
-  ];
+    @Input() headers: string[] = [];
+  @Input() datas = <any>[];
+ @Input() displayColumns = [];
 
-  getStatusClass(status: string) {
-    return {
-      'paid': status === 'Paid',
-      'sent': status === 'Sent',
-      'partially-paid': status === 'Partially Paid'
-    };
-  }
 
-  onActionClick(invoice: Invoice) {
-    console.log('Action clicked for:', invoice);
-  }
+
+
+ // headers = ['ID', 'Name', 'Age', 'Position'];
+  // datas = <any>[
+  //   { id: 1, name: 'John Doe', age: 25, position: 'Developer' },
+  //   { id: 2, name: 'Jane Doe', age: 30, position: 'Manager' },
+  //   { id: 3, name: 'Will Smith', age: 28, position: 'Designer' }
+  // ];
+  // displayColumns = ['id', 'name', 'age', 'position'];
 }
