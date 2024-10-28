@@ -9,13 +9,13 @@ import { TextareaComponent } from './components/textarea/textarea.component';
 import { DatepickerComponent } from "./components/datepicker/datepicker.component";
 import { ActionbuttonComponent } from "./components/actionbutton/actionbutton.component";
 import { FloatingButtonComponent } from './components/floating-button/floating-button.component';
-import { CreatepageComponent } from './pages/invoice/createpage/createpage.component';
+import { CreateInvoiceComponent } from './pages/invoice/createpage/create-invoice.component';
 import { TableComponent } from "./components/table/table.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, ButtonComponent, IconButtonComponent, InputFieldComponent, DropdownComponent, TextareaComponent, DatepickerComponent, ActionbuttonComponent, FloatingButtonComponent, CreatepageComponent, TableComponent],
+  imports: [RouterOutlet, CommonModule, ButtonComponent, IconButtonComponent, InputFieldComponent, DropdownComponent, TextareaComponent, DatepickerComponent, ActionbuttonComponent, FloatingButtonComponent, CreateInvoiceComponent, TableComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -52,7 +52,7 @@ export class AppComponent {
   displayColumns = ['id','name','inovicedate','invoiceamount','status'];
 
 
-  headers = [
+   headers: Array<{ name: string, value: string, type: string }> = [
     { name: 'id', value: 'ID', type: 'number' },
     { name: 'name', value: 'Name', type: 'string' },
     { name: 'invoiceDate', value: 'Invoice Date', type: 'date' },

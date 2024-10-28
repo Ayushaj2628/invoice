@@ -5,13 +5,13 @@ import { DropdownComponent } from '../../../components/dropdown/dropdown.compone
 import { InputFieldComponent } from '../../../components/input-field/input-field.component';
 
 @Component({
-  selector: 'app-createpage',
+  selector: 'app-create-invoice',
   standalone: true,
   imports: [DatepickerComponent,TextareaComponent,TextareaComponent,DropdownComponent,InputFieldComponent],
-  templateUrl: './createpage.component.html',
-  styleUrl: './createpage.component.scss'
+  templateUrl: './create-invoice.component.html',
+  styleUrl: './create-invoice.component.scss'
 })
-export class CreatepageComponent {
+export class CreateInvoiceComponent {
 
   @Input() label: string = 'client';
 
