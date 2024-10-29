@@ -18,6 +18,13 @@
 <!-- <app-button></app-button> -->
 
 
-<app-table [headers]="headers" [datas]="datas" [displayColumns]="displayColumns"></app-table>
+<!-- <app-table [headers]="headers" [datas]="datas" [displayColumns]="displayColumns"></app-table> -->
+ <div style="display: flex; justify-content: space-evenly;">
+<a routerLink = "/">Home</a>
+<a routerLink = "/create-invoice">Create Invoice</a>
+<a routerLink = "/test1">Test1</a>
+<a routerLink = "/test2" id="2">Test2</a>
+<a routerLink = "/test3">Test3</a>
+</div>
 
 <router-outlet></router-outlet>

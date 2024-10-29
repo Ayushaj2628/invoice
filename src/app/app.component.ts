@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { ButtonComponent } from './components/button/button.component';
 import { IconButtonComponent } from "./components/icon-button/icon-button.component";
 import { InputFieldComponent } from './components/input-field/input-field.component';
@@ -15,7 +15,7 @@ import { TableComponent } from "./components/table/table.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, ButtonComponent, IconButtonComponent, InputFieldComponent, DropdownComponent, TextareaComponent, DatepickerComponent, ActionbuttonComponent, FloatingButtonComponent, CreateInvoiceComponent, TableComponent],
+  imports: [RouterOutlet, CommonModule, ButtonComponent, IconButtonComponent, InputFieldComponent, DropdownComponent, TextareaComponent, DatepickerComponent, ActionbuttonComponent, FloatingButtonComponent, CreateInvoiceComponent, TableComponent, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
