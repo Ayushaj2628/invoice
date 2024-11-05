@@ -11,11 +11,13 @@ import { ActionbuttonComponent } from "./components/actionbutton/actionbutton.co
 import { FloatingButtonComponent } from './components/floating-button/floating-button.component';
 import { CreateInvoiceComponent } from './pages/invoice/createpage/create-invoice.component';
 import { TableComponent } from "./components/table/table.component";
+import { MovieSearchComponent } from './pages/movie-search/movie-search.component';
+import { AppModule } from './app.module';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, ButtonComponent, IconButtonComponent, InputFieldComponent, DropdownComponent, TextareaComponent, DatepickerComponent, ActionbuttonComponent, FloatingButtonComponent, CreateInvoiceComponent, TableComponent, RouterLink],
+  imports: [RouterOutlet, CommonModule, ButtonComponent, IconButtonComponent, InputFieldComponent, DropdownComponent, TextareaComponent, DatepickerComponent, ActionbuttonComponent, FloatingButtonComponent, CreateInvoiceComponent, TableComponent, RouterLink,MovieSearchComponent, AppModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

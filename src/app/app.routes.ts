@@ -3,8 +3,8 @@ import { CreateInvoiceComponent } from './pages/invoice/createpage/create-invoic
 import { Test1Component } from './pages/invoice/test1/test1.component';
 import { Test2Component } from './pages/invoice/test2/test2.component';
 import { Test3Component } from './pages/invoice/test3/test3.component';
-import buttonComponentStories from './components/button/button.component.stories';
 import { ButtonComponent } from './components/button/button.component';
+import { MovieSearchComponent } from './pages/movie-search/movie-search.component';
 
 export const routes: Routes = [
    {
@@ -30,5 +30,9 @@ export const routes: Routes = [
    {
       path: "text2/:id",
       component: Test2Component
+   },
+   {
+      path: "movie-search",
+      component: MovieSearchComponent
    },
 ];

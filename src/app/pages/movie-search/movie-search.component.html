@@ -1,0 +1,13 @@
+<div>
+    <h1>Movie Search</h1>
+    <div>
+      <ul>
+        <li *ngFor="let movie of movies">
+          <h3>{{ movie.Title }} ({{ movie.Year }})</h3>
+        </li>
+      </ul>
+    </div>
+    <ng-template #noMovies>
+      <p>No movies found.</p>
+    </ng-template>
+  </div>
