@@ -6,7 +6,7 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-movie-search',
   standalone: true,    
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink,],
   templateUrl: './movie-search.component.html',
   styleUrl: './movie-search.component.scss'
 })

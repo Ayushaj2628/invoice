@@ -12,12 +12,14 @@ import { FloatingButtonComponent } from './components/floating-button/floating-b
 import { CreateInvoiceComponent } from './pages/invoice/createpage/create-invoice.component';
 import { TableComponent } from "./components/table/table.component";
 import { MovieSearchComponent } from './pages/movie-search/movie-search.component';
-import { AppModule } from './app.module';
+import { HeaderComponent } from "./components/header/header.component";
+import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from "./components/home/home.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, ButtonComponent, IconButtonComponent, InputFieldComponent, DropdownComponent, TextareaComponent, DatepickerComponent, ActionbuttonComponent, FloatingButtonComponent, CreateInvoiceComponent, TableComponent, RouterLink,MovieSearchComponent, AppModule],
+  imports: [RouterOutlet, CommonModule, ButtonComponent, IconButtonComponent, InputFieldComponent, DropdownComponent, TextareaComponent, DatepickerComponent, ActionbuttonComponent, FloatingButtonComponent, CreateInvoiceComponent, TableComponent, RouterLink, MovieSearchComponent, HeaderComponent, FooterComponent, HomeComponent,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
