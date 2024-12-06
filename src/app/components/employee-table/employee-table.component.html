@@ -1,0 +1,28 @@
+<div class="class-wrapper">
+<h2 class="heading">Employee List</h2>
+<button class="btn" routerLink="/employees/create">Create New Employee</button>
+<table class="table">
+  <thead class="table-head">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Position</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody class="table-body">
+    <tr *ngFor="let employee of employees">
+      <td>{{ employee.id }}</td>
+      <td>{{ employee.name }}</td>
+      <td>{{ employee.age }}</td>
+      <td>{{ employee.position }}</td>
+      <td>
+        <button class="btn" routerLink="/employees/{{ employee }}/edit" (click)="updateEmployee()">Edit</button>
+        <button class="btn" (click)="deleteEmployee(employee.id)">Delete</button>
+        <button class="btn" routerLink="/view/{{ employee.id }}">View</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>

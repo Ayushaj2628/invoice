@@ -15,11 +15,12 @@ import { MovieSearchComponent } from './pages/movie-search/movie-search.componen
 import { HeaderComponent } from "./components/header/header.component";
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from "./components/home/home.component";
+import { EmployeeTableComponent } from './components/employee-table/employee-table.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, ButtonComponent, IconButtonComponent, InputFieldComponent, DropdownComponent, TextareaComponent, DatepickerComponent, ActionbuttonComponent, FloatingButtonComponent, CreateInvoiceComponent, TableComponent, RouterLink, MovieSearchComponent, HeaderComponent, FooterComponent, HomeComponent,],
+  imports: [RouterOutlet, CommonModule, ButtonComponent, IconButtonComponent, InputFieldComponent, DropdownComponent, TextareaComponent, DatepickerComponent, ActionbuttonComponent, FloatingButtonComponent, CreateInvoiceComponent, TableComponent, RouterLink, MovieSearchComponent, HeaderComponent, FooterComponent, HomeComponent, EmployeeTableComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

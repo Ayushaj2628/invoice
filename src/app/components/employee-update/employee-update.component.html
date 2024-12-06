@@ -1,0 +1,15 @@
+<div class="class-wrapper ">
+<h2 class="heading">Update Employee</h2>
+<form class="form" (ngSubmit)="updateEmployee()">
+  <label class="label" for="name">Name:</label>
+  <input class="input" type="text" id="name" [(ngModel)]="employee.name" name="name" required />
+
+  <label class="label" for="age">Age:</label>
+  <input class="input" type="number" id="age" [(ngModel)]="employee.age" name="age" required />
+
+  <label class="label" for="position">Position:</label>
+  <input class="input" type="text" id="position" [(ngModel)]="employee.position" name="position" required />
+
+  <button class="btn" type="submit">Update</button>
+</form>
+</div>
