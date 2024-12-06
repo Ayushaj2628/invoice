@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProtectedComponent } from './protected.component';
+import { EmployeeViewComponent } from './employee-view.component';
 
-describe('ProtectedComponent', () => {
-  let component: ProtectedComponent;
-  let fixture: ComponentFixture<ProtectedComponent>;
+describe('EmployeeViewComponent', () => {
+  let component: EmployeeViewComponent;
+  let fixture: ComponentFixture<EmployeeViewComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ProtectedComponent]
+      imports: [EmployeeViewComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ProtectedComponent);
+    fixture = TestBed.createComponent(EmployeeViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
